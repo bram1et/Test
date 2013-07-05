@@ -11,10 +11,10 @@ import android.widget.GridView;
 import android.widget.ImageView;
 
 public class ImageAdapter extends BaseAdapter {
-    private Context mContext;
+    private Context nContext;
 
     public ImageAdapter(Context c) {
-        mContext = c;
+        nContext = c;
     }
 
     public int getCount() {
@@ -33,7 +33,7 @@ public class ImageAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         ImageView imageView;
         if (convertView == null) {  // if it's not recycled, initialize some attributes
-            imageView = new ImageView(mContext);
+            imageView = new ImageView(nContext);
             imageView.setLayoutParams(new GridView.LayoutParams(175, 250));
             imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
             imageView.setPadding(8, 8, 8, 8);
